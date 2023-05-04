@@ -1,23 +1,15 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-
 import { NativeBaseProvider, Box } from "native-base";
+import SrcRoot from './src/RootApp';
 
 
 function App(): JSX.Element {
 
   return (
     <NativeBaseProvider>
-      <Box>Hello world</Box>
+      <Box flex={1} bg="#050505">
+        <SrcRoot />
+      </Box>
     </NativeBaseProvider>
   );
 }
