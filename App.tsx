@@ -1,16 +1,13 @@
 import React from 'react';
 import { NativeBaseProvider, Box } from "native-base";
 import SrcRoot from './src/RootApp';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 function App(): JSX.Element {
 
   return (
-    <NativeBaseProvider>
-      <Box flex={1} bg="#050505">
         <SrcRoot />
-      </Box>
-    </NativeBaseProvider>
   );
 }
 
