@@ -1,10 +1,16 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
+
+
+
 
 const SrcRoot = () => {
+
   return (
     <>
-      <Text style={{color:"#fff"}}> index</Text>
+    <Text>Root App </Text>
     </>
   )
 }
