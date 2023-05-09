@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import 'react-native-gesture-handler';
+import React, { useEffect } from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
-
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 import HomeScreen from './screens/HomeScreen'
 import AuthenticationScreen from './screens/Authenticate/Index'
@@ -16,19 +16,19 @@ const SrcRoot = () => {
     // Check if user is logged in
     // Set isLoggedIn state accordingly
     // For the purpose of this example, we'll set isLoggedIn to true
-    setIsLoggedIn(false);
+    setIsLoggedIn(true);
   }, []);
 
   return (
     <NavigationContainer>
-    <Stack.Navigator>
+      <Stack.Navigator>
         {isLoggedIn ? (
-          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         ) : (
-          <Stack.Screen name="Auth"  options={{ title: '' }} component={AuthenticationScreen} />
+          <Stack.Screen name="Auth" component={AuthenticationScreen} options={{ headerShown: false }} />
         )}
-    </Stack.Navigator>
-  </NavigationContainer>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

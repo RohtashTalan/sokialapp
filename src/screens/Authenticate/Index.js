@@ -16,7 +16,10 @@ const Stack = createNativeStackNavigator();
 const AuthenticationScreen = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login"  options={{ title: '' }} component={SetPasswordScreen} />
+      <Stack.Screen name="Login"  options={{ headerShown: false }} component={SetPasswordScreen} />
+      <Stack.Screen name="Signup"  options={{ headerShown: false }} component={SignupScreen} />
+      <Stack.Screen name="SetPassword"  options={{ headerShown: false }} component={SetPasswordScreen} />
+      <Stack.Screen name="ForgotPassword"  options={{ headerShown: false }} component={ForgotPasswordScreen} />
     
     </Stack.Navigator>
   )
